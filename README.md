@@ -45,42 +45,42 @@ The goal is to provide a powerful tool for researchers, students, and profession
 
 ## 🏛️ Architecture
 
-*[```mermaid
+```mermaid
 graph TD
     subgraph "Data Processing / Ingestion"
-        A[User Uploads PDF] --> B{Process PDF};
-        B --> C[Extract Text];
-        B --> D[Extract Images];
-        B --> E[Extract Tables];
+        A["User Uploads PDF"] --> B{"Process PDF"};
+        B --> C["Extract Text"];
+        B --> D["Extract Images"];
+        B --> E["Extract Tables"];
 
-        C --> F[Chunk Text];
-        F --> G[Embed Text Chunks <br>(all-MiniLM-L6-v2)];
-        G --> H1[(Text Vector Store <br> ChromaDB)];
+        C --> F["Chunk Text"];
+        F --> G["Embed Text Chunks <br>(all-MiniLM-L6-v2)"];
+        G --> H1[("Text Vector Store <br> ChromaDB")];
 
-        D --> I[Embed Images <br>(CLIP)];
-        I --> H2[(Image Vector Store <br> ChromaDB)];
+        D --> I["Embed Images <br>(CLIP)"];
+        I --> H2[("Image Vector Store <br> ChromaDB")];
 
-        E --> J[Summarize Tables <br>(Gemini)];
-        J --> K[Embed Summaries <br>(all-MiniLM-L6-v2)];
-        K --> H3[(Table Vector Store <br> ChromaDB)];
+        E --> J["Summarize Tables <br>(Gemini)"];
+        J --> K["Embed Summaries <br>(all-MiniLM-L6-v2)"];
+        K --> H3[("Table Vector Store <br> ChromaDB")];
     end
 
     subgraph "Query / Generation"
-        L[User Asks Question] --> M{Hybrid Retrieval};
+        L["User Asks Question"] --> M{"Hybrid Retrieval"};
         H1 --> M;
         H2 --> M;
         H3 --> M;
 
-        M --> N[Combine Text, Images, & Tables into Context];
-        N --> O{Multi-Modal LLM <br>(Gemini Pro)};
+        M --> N["Combine Text, Images, & Tables into Context"];
+        N --> O{"Multi-Modal LLM <br>(Gemini Pro)"};
         L --> O;
-        O --> P[Display Answer to User];
+        O --> P["Display Answer to User"];
     end
 
     style A fill:#cde4ff
     style L fill:#cde4ff
     style P fill:#cde4ff
-```]*
+````
 
 ---
 
