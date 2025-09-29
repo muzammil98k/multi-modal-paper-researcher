@@ -6,7 +6,7 @@ A sophisticated RAG (Retrieval-Augmented Generation) application that allows use
 
 ## 🚀 Live Demo
 
-**[Link to your deployed Streamlit App will go here]**
+**[[Link to my demo](https://multi-modal-paper-researcher-273nz6kecdpyxzemmwl8qb.streamlit.app/)]**
 
 ---
 
