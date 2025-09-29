@@ -1,0 +1,10 @@
+streamlit
+sentence-transformers
+chromadb
+google-generativeai
+python-dotenv
+PyMuPDF
+langchain
+Pillow
+pandas
+tabulate
