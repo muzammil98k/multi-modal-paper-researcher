@@ -8,3 +8,4 @@ langchain
 Pillow
 pandas
 tabulate
+langchain-text-splitters
