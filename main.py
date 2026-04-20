@@ -3,7 +3,7 @@ import shutil
 import time
 import streamlit as st
 import fitz  # PyMuPDF
-from langchain_text_splitters import RecursiveCharacterTextSplitter
+from langchain.text_splitters import RecursiveCharacterTextSplitter
 from sentence_transformers import SentenceTransformer
 import chromadb
 from dotenv import load_dotenv
